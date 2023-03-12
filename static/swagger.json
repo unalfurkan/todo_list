@@ -1,0 +1,41 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Todo List API",
+    "description": "An API for managing a todo list",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "paths": {
+    "/add_todo/{value}": {
+      "post": {
+        "summary": "Add a new todo",
+        "description": "Adds a new todo with the specified value",
+        "operationId": "addTodo",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "description": "The value of the new todo",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Todo added successfully"
+          },
+          "400": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    }
+  }
+}
