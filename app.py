@@ -38,8 +38,8 @@ def add_todo(value):
         return "fail"
 
 
-@app.route('/remove_todo/<_id>')
-def remove_todo(_id):
+@app.route('/delete_todo/<_id>')
+def delete_todo(_id):
     print("calling remove_todo")
     try:
         remove_todo_service.remove_todo(_id)
@@ -58,8 +58,8 @@ def add_task(value):
         return "fail"
 
 
-@app.route('/remove_task/<_id>')
-def remove_task(_id):
+@app.route('/delete_task/<_id>')
+def delete_task(_id):
     print("calling remove_task")
     try:
         remove_task_service.remove_task(_id)
