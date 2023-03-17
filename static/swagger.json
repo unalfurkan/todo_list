@@ -12,7 +12,7 @@
   ],
   "paths": {
     "/add_todo/{value}": {
-      "get": {
+      "post": {
         "summary": "Add a new todo",
         "description": "Adds a new todo to the list with the specified description",
         "operationId": "addTodo",
@@ -38,7 +38,7 @@
       }
     },
     "/delete_todo/{id}": {
-      "get": {
+      "delete": {
         "summary": "Delete a todo",
         "description": "Deletes the todo with the specified ID",
         "operationId": "deleteTodo",
@@ -64,7 +64,7 @@
       }
     },
     "/add_task/{value}": {
-      "get": {
+      "post": {
         "summary": "Add a new task",
         "description": "Adds a new task to the list with the specified description",
         "operationId": "addTask",
@@ -90,7 +90,7 @@
       }
     },
     "/delete_task/{id}": {
-      "get": {
+      "delete": {
         "summary": "Delete a task",
         "description": "Deletes the task with the specified ID",
         "operationId": "deleteTask",

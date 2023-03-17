@@ -28,7 +28,7 @@ def index():
     return "Hello, World!"
 
 
-@app.route('/add_todo/<value>')
+@app.route('/add_todo/<value>', methods=["POST"])
 def add_todo(value):
     print("calling add_todo")
     try:
@@ -38,7 +38,7 @@ def add_todo(value):
         return "fail"
 
 
-@app.route('/delete_todo/<_id>')
+@app.route('/delete_todo/<_id>', methods=["DELETE"])
 def delete_todo(_id):
     print("calling remove_todo")
     try:
@@ -48,7 +48,7 @@ def delete_todo(_id):
         return "fail"
 
 
-@app.route('/add_task/<value>')
+@app.route('/add_task/<value>', methods=["POST"])
 def add_task(value):
     print("calling add_task")
     try:
@@ -58,7 +58,7 @@ def add_task(value):
         return "fail"
 
 
-@app.route('/delete_task/<_id>')
+@app.route('/delete_task/<_id>', methods=["DELETE"])
 def delete_task(_id):
     print("calling remove_task")
     try:
